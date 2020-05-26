@@ -6,20 +6,26 @@
 <body>
 
 <script>
-	arr=[10, 2, 9, 4, 45, 1, 4, 9, 8, 9];
-	/*arr=[11, 55, 98, 55, 77, 997, -15, 7, 15, 1515,32, 48, 99, 0, 4, 7, 8, 3, 4];*/
+	/*arr = [3, 2, 1];*/
+	/*arr = [10, 2, 9, 4, 45, 1, 4, 9, 8, 9];*/
+	arr = [11, 55, 98, 55, 77, 997, -15, 7, 15, 1515,32, 48, 99, 0, 4, 7, 8, 3, 4];
 
 	document.write(arr.join(" ") + '...original order<br>');
 	document.write(arr.length  + '...elements in the array<br><hr><br>');
 	var swapped = true;
+	i = 0;
+	h = 0;
 
 	while(swapped){
 		swapped = false;
-		for(var i = 0; i <= arr.length-1; i++){
+		for(i = 0; i <= arr.length-1; i++){
+
 			if (arr[i] > arr[i+1]){
-				var h = arr[i+1];
-				arr[i+1] = arr[i];
-				arr[i] = h;
+				
+				h = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = h;
+				
 				swapped = true;
 				document.write(arr.join(" ") + '<br>');
 			}

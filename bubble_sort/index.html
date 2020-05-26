@@ -6,25 +6,25 @@
 <body>
 
 <script>
-	arr=[10, 2, 9, 4, 5, 1, 4, 9, 8];
+	arr=[10, 2, 9, 4, 45, 1, 4, 9, 8, 9];
+	/*arr=[11, 55, 98, 55, 77, 997, -15, 7, 15, 1515,32, 48, 99, 0, 4, 7, 8, 3, 4];*/
 
+	document.write(arr.join(" ") + '...original order<br>');
+	document.write(arr.length  + '...elements in the array<br><hr><br>');
 	swapped = true;
 
 	while(swapped){
 		swapped = false;
-		for(var i=0; i<=9; i++){
+		for(var i = 0; i <= arr.length-1; i++){
 			if (arr[i] > arr[i+1]){
 				var h = arr[i+1];
-				/*document.write("hello if<br>");*/
 				arr[i+1] = arr[i];
 				arr[i] = h;
 				swapped = true;
-				document.write(arr + '<br>');
+				document.write(arr.join(" ") + '<br>');
 			}
-		}
-			
+		}			
 	}
-
 </script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+figure {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 0;
+}
+
+figcaption {
+	display: flex;
+	position: absolute;
+	font-size: 25pt;
+	color: darkblue;
+	justify-content: center;
+	margin-top: 200px;
+
+}
